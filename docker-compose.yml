@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  fastapi:
+    build:
+      dockerfile: ../Dockerfile
+      context: ./fastapi
+    ports:
+      - 8000:8000
+
+  cherrypy:
+    build:
+      dockerfile: ../Dockerfile
+      context: ./cherrypy
+    ports:
+      - 8080:8080
+
+  flask:
+    build:
+      dockerfile: ../Dockerfile
+      context: ./flask
+    ports:
+      - 5000:5000
